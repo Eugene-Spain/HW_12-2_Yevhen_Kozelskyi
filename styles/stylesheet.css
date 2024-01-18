@@ -14,8 +14,8 @@ main .right {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 50px;
   align-items: center;
+  width: 50px;
 }
 main .middle-part {
   display: flex;
@@ -27,8 +27,10 @@ main .middle-part {
 }
 main .top, main .bottom {
   display: flex;
-  width: 100%;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 main .chess-board {
   display: flex;

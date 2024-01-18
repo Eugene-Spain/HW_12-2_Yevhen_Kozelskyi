@@ -1,7 +1,12 @@
 body {
     font-size: 30px;
 }
-
+@mixin display-flex($flex-direction, $justify-content){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: center;
+}
 main {
     width: 900px;
     height: 900px;
@@ -12,26 +17,19 @@ main {
 
     .left,
     .right {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        @include display-flex(column,space-evenly);
         width: 50px;
-        align-items: center;
     }
 
     .middle-part{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:space-around;
+        @include display-flex(column, space-around);
         width: 800px;
         height: 900px;
     }
 
     .top, .bottom{
-        display: flex;
+        @include display-flex(row,space-around);
         width: 100%;
-        justify-content: space-around;
     }
 
     .chess-board {
